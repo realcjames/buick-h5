@@ -33,10 +33,7 @@ class Index extends Component {
   render() {
     const { common } = this.props;
 
-    return (
-      <div className='${dirName}-page'>
-      </div>
-    )
+    return <div className='${dirName}-page'>${dirName}</div>
   }
 }
 
