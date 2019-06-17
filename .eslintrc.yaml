@@ -1,0 +1,26 @@
+---
+plugins:
+  - react
+
+extends:
+  - eslint:recommended
+  - plugin:prettier/recommended
+  - plugin:react/recommended
+
+parser: babel-eslint
+
+env:
+  browser: true
+  node: true
+  es6: true
+
+# 这里的例外当然是越少越好啦 :-(
+rules:
+  no-console: off
+  no-unused-vars: warn
+  react/prop-types: off
+  react/display-name: off
+
+settings:
+  react:
+    version: 16.8.6
