@@ -1,6 +1,7 @@
 import { connect } from 'dva';
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
+import { jsSdkConfig } from '../../utils/weixin';
 import './index.scss';
 
 class Index extends Component {
@@ -9,6 +10,13 @@ class Index extends Component {
     autoBind(this);
 
     this.state = {};
+  }
+
+  componentWillMount() {
+    console.log('home componentWillMount');
+    console.log(document.location.href);
+
+    jsSdkConfig();
   }
 
   componentDidMount() {}
